@@ -1,7 +1,6 @@
 # Imhotep Mail
 
-This is a simple Python library for sending emails using Flask and Flask-Mail. It provides an easy way to configure and send emails from a Flask
-application.
+This is a simple Python library for sending emails. It provides an easy way to configure and send emails from any Python code.
 
 ## Installation
 
