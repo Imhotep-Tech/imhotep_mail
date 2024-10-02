@@ -22,7 +22,7 @@ from imhotep_mail import mail_config, send_mail
 
 # SMTP server configuration
 smtp_server = 'smtp.example.com'
-smtp_port = 587
+smtp_port = 465
 username = 'your-email@example.com'
 password = 'your-password'
 
@@ -43,7 +43,7 @@ from imhotep_mail import mail_config, send_mail
 
 # SMTP server configuration
 smtp_server = 'smtp.example.com'
-smtp_port = 587
+smtp_port = 465
 username = 'your-email@example.com'
 password = 'your-password'
 
@@ -55,32 +55,29 @@ body = 'This is a test email sent using the Imhotep Mail library.'
 attachments = ['path/to/attachment1.pdf', 'path/to/attachment2.jpg']
 send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, attachments)
 ```
-
-## Configuration
-
-You can customize the mail configuration by passing a dictionary of options to the `mail_config` function:
-
+# Gmail Example
 ```python
-from imhotep_mail import mail_config
+from imhotep_mail import mail_config, send_mail
 
-# SMTP server configuration with custom options
-smtp_server = 'smtp.example.com'
+# SMTP server configuration for Gmail
+smtp_server = 'smtp.gmail.com'
 smtp_port = 587
-username = 'your-email@example.com'
-password = 'your-password'
-user_tls = True
-user_ssl = False
+username = 'your-email@gmail.com'  # Replace with your Gmail email address
+password = 'your-app-password'    # Replace with the app password generated from Google account settings
 
-# Customizing the mail configuration
-mail_app, mail = mail_config(smtp_server, smtp_port, username, password, user_tls, user_ssl)
-
-# Sending an email with custom options
+# Sending an email to a Gmail address
 to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
 
-send_mail(mail_app, mail, to_email, subject, body)
+send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
 ```
+
+In this example, you need to replace `'your-app-password'` with the actual app password generated from your Gmail account settings. The app password
+is different from your regular password and allows access to only your Gmail account, so it's more secure than your regular password.
+
+For more information on how to generate an app password for Google, you can refer to [Google's
+documentation](https://support.google.com/accounts/1107213).
 
 ## Contributing
 
