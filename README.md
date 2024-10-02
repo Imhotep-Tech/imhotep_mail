@@ -61,7 +61,7 @@ from imhotep_mail import mail_config, send_mail
 
 # SMTP server configuration for Gmail
 smtp_server = 'smtp.gmail.com'
-smtp_port = 587
+smtp_port = 465
 username = 'your-email@gmail.com'  # Replace with your Gmail email address
 password = 'your-app-password'    # Replace with the app password generated from Google account settings
 
