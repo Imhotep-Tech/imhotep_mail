@@ -25,12 +25,17 @@ smtp_port = 465
 username = 'your-email@example.com'
 password = 'your-password'
 
+#those are optional not required
+user_ssl = False
+user_tls = True
+
 # Sending an email
 to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
+is_html = False
 
-success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, is_html)
 if error:
     #do somthing
 ```
@@ -48,13 +53,18 @@ smtp_port = 465
 username = 'your-email@example.com'
 password = 'your-password'
 
+#those are optional not required
+user_ssl = False
+user_tls = True
+
 # Sending an email with attachments
 to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
+is_html = False
 
 attachments = ['path/to/attachment1.pdf', 'path/to/attachment2.jpg']
-success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, attachments)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, is_html, attachments, user_tls, user_ssl)
 if error:
     #do somthing
 ```
@@ -72,8 +82,9 @@ password = 'your-app-password'    # Replace with the app password generated from
 to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
+is_html = False
 
-success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, is_html)
 if error:
     #do somthing
 ```

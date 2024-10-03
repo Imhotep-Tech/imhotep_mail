@@ -20,7 +20,7 @@ def mail_config(smtp_server, smtp_port, username, password, user_tls=True, user_
     mail = Mail(app)
     return app, mail
 
-def send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, attachments=None, is_html=False, user_tls=False, user_ssl=True):
+def send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, is_html=False, attachments=None, user_tls=False, user_ssl=True):
 
     #running the mail config function to run the mail data on a flask context
     app, mail = mail_config(smtp_server, smtp_port, username, password, user_tls, user_ssl)
