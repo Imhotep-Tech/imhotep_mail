@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='imhotep_mail',  # Name of your library
-    version='0.0.1',  # Version number
+    version='0.0.2',  # Version number
     packages=find_packages(),  # Automatically find package directories
     install_requires=[
         'Flask',

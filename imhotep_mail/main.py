@@ -51,6 +51,6 @@ def send_mail(smtp_server, smtp_port, username, password, to_email, subject, bod
 
         try:
             mail.send(msg)
-            print("Email sent successfully")
+            return "Email sent successfully", None
         except Exception as e:
-            print(f"Failed to send email: {str(e)}")
+            return None, f"Failed to send email: {str(e)}"

@@ -30,7 +30,9 @@ to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
 
-send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+if error:
+    #do somthing
 ```
 
 ### Example 2: Sending an Email with Attachments
@@ -52,7 +54,9 @@ subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
 
 attachments = ['path/to/attachment1.pdf', 'path/to/attachment2.jpg']
-send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, attachments)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body, attachments)
+if error:
+    #do somthing
 ```
 # Gmail Example
 ```python
@@ -69,7 +73,9 @@ to_email = 'recipient@example.com'
 subject = 'Hello from Imhotep Mail!'
 body = 'This is a test email sent using the Imhotep Mail library.'
 
-send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+success, error = send_mail(smtp_server, smtp_port, username, password, to_email, subject, body)
+if error:
+    #do somthing
 ```
 
 In this example, you need to replace `'your-app-password'` with the actual app password generated from your Gmail account settings. The app password
