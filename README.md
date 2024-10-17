@@ -17,7 +17,7 @@ pip install imhotep-mail
 Here's how you can use the library to send a simple email:
 
 ```python
-from imhotep_mail import mail_config, send_mail
+from imhotep_mail import send_mail
 
 # SMTP server configuration
 smtp_server = 'smtp.example.com'
@@ -45,7 +45,7 @@ if error:
 If you need to send an email with attachments, you can specify them in the `attachments` parameter:
 
 ```python
-from imhotep_mail import mail_config, send_mail
+from imhotep_mail import send_mail
 
 # SMTP server configuration
 smtp_server = 'smtp.example.com'
@@ -70,7 +70,7 @@ if error:
 ```
 # Gmail Example
 ```python
-from imhotep_mail import mail_config, send_mail
+from imhotep_mail import send_mail
 
 # SMTP server configuration for Gmail
 smtp_server = 'smtp.gmail.com'
